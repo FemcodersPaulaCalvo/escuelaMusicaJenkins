@@ -5,13 +5,13 @@ stages {
     stage('Build') {
         steps {
             echo '1. Docker build'
-            sh 'docker build -t escuela-musica .'
+            sh 'docker build --no-cache -t escuela-musica -f  .'
         }
     }
     stage('Deploy') {
         steps {
             echo '2. Deploy step'
-            sh 'docker run -u root -d -p 8080:8080 -p 50000:50000 -v /var/run/docker.sock:/var/run/docker.sock -v jenkins_home:/var/jenkins_home jenkins/jenkins:lts-jdk11'
+            sh 'docker run -p 8081:80 --name escuela-musica '
         }
     }
   }
