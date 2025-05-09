@@ -11,7 +11,7 @@ stages {
     stage('Deploy') {
         steps {
             echo '2. Deploy step'
-            sh 'docker run -p 8081:80 --name escuela-musica '
+            sh 'docker run -p 8081:80 --name escuela-musica escuela-musica '
         }
     }
   }
