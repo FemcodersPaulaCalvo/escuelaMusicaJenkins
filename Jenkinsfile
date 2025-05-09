@@ -5,7 +5,7 @@ stages {
     stage('Build') {
         steps {
             echo '1. Docker build'
-            sh 'docker build --no-cache -t escuela-musica -f  .'
+            sh 'docker build --no-cache -t escuela-musica -f  Dockerfile.'
         }
     }
     stage('Deploy') {
