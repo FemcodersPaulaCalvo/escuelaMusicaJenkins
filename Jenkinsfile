@@ -11,7 +11,7 @@ pipeline {
         stage('Checkout github') {
             steps {
                 echo '1. Github'
-                git branch: 'jenkins2, credentialsId: "${GITHUB_CREDENTIALS_ID}", url: 'https://github.com/FemcodersPaulaCalvo/escuelaMusicaJenkins.git'
+                git branch: 'jenkins2', credentialsId: "${GITHUB_CREDENTIALS_ID}", url: 'https://github.com/FemcodersPaulaCalvo/escuelaMusicaJenkins.git'
             }
         }
 
